@@ -41,13 +41,16 @@ def definirNivel(puntuacion):
     else:
         print("Error la puntuación no es válida")
 
-    print("Tu nivel es "+nivel+" y tu sueldo es de "+str(dinero)+" € con "+str(extra)+
-      " € de extra("+str(total)+"€)")
+    return nivel,dinero,extra,total
+
+    
     
 def main():
     puntuacion=pedirPuntuacion()
 
-    definirNivel(puntuacion)
+    nivel, dinero, extra, total=definirNivel(puntuacion)
+    print("Tu nivel es "+nivel+" y tu sueldo es de "+str(dinero)+" € con "+str(extra)+
+      " € de extra("+str(total)+"€)")
 
 if (__name__ == "__main__"):
     main()

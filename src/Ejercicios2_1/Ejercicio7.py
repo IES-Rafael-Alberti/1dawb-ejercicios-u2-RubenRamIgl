@@ -37,12 +37,13 @@ def impositivo(renta):
     else:
         impositivo=45
 
-    print("Tu impositivo es :",impositivo)
+    return impositivo
+
 
 def main():
     renta=pedirRenta()
 
-    impositivo(renta)
+    print("Tu impositivo es :",impositivo(renta))
 
 if (__name__ == "__main__"):
     main()

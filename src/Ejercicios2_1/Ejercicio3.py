@@ -23,7 +23,7 @@ def pedirDivisor():
     salir=False
 
     while not salir:
-        if(n2.isnumeric):
+        if(n2.replace(".","").isnumeric()):
             salir=True
         else:
             print("Error, debes introducir un número")
@@ -33,15 +33,16 @@ def pedirDivisor():
 def division(n1:float,n2:float):
     if n2!=0:
         resultado=n1/n2
-        print(f"{n1}/{n2}={resultado:.2f}")
+        return resultado
     else:
         print("Error, el número no puede ser dividido entre 0")
+        
 
 def main():
     n1=pedirNumero()
     n2=pedirDivisor()
     
-    division(n1,n2)
+    print(f"{n1}/{n2}={division(n1,n2)}")
 
 if (__name__ == "__main__"):
     main()

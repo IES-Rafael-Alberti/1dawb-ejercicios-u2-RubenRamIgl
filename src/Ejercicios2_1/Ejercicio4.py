@@ -6,19 +6,23 @@ else:
     print("El número es impar")"""
 
 def pedirNumero():
-    return int(input("Introduce un número: "))
+    n=int(input("Introduce un número: "))
+    return n
 
 def parImpar(n):
     if(n%2==0):
-        print("El número es par")
+        return True
     else:
-        print("El número es impar")
+        return False
         
 
 def main():
     n=pedirNumero()
 
-    parImpar(n)
+    if(parImpar(n)):
+        print("El número es par")
+    else:
+        print("El número es impar")
 
 if (__name__ == "__main__"):
     main()

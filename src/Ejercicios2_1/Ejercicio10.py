@@ -17,14 +17,7 @@ else:
 
 def pedirTipo():
     tipo=input("La pizza es vegetariana?(si/no): ")
-    salir=False
-    while not salir:
-        if(tipo.lower()=="si" or tipo.lower()=="no"):
-            salir=True
-        else:
-            print("Error, introduce una respuesta correcta")
-            tipo=input("La pizza es vegetariana?(si/no): ")
-    return tipo
+    return tipo.lower()
 
 def pedirIngredientes(tipo):
     tipo=str(tipo)
@@ -54,13 +47,10 @@ def pedirIngredientes(tipo):
 
     return pizza,ingrediente
 
-def pizzaCompleta(pizza,ingrediente):
-    print("Su pizza es "+pizza+" y sus ingredientes son mozzarella, tomate y "+ingrediente)
-
 def main():
     tipo=pedirTipo()
     pizza,ingrediente=pedirIngredientes(tipo)
-    pizzaCompleta(pizza,ingrediente)
+    print("Su pizza es "+pizza+" y sus ingredientes son mozzarella, tomate y "+ingrediente)
 
 if (__name__ == "__main__"):
     main()

@@ -34,15 +34,18 @@ def pedirIngresos():
 
 def tributa(edad,ingresos):
     if(edad>16 and ingresos>=1000):
-        print("Puedes tributar")
+        return True
     else:
-        print("No puedes tributar")
+        return False
 
 def main():
     edad=pedirEdad()
     ingresos=pedirIngresos()
 
-    tributa(edad,ingresos)
+    if(tributa(edad,ingresos)):
+        print("Puedes tributar")
+    else:
+        print("No puede tributar")
 
 if (__name__ == "__main__"):
     main()
