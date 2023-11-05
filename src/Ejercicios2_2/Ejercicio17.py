@@ -10,11 +10,12 @@ def pedirDigitos():
 
 def digitoMayor(digitos):
     mayor=max(digitos)
-    print("El dígito mayor es",mayor)
+    return mayor
 
 def main():
     digitos=pedirDigitos()
-    digitoMayor(digitos)
+    print("El dígito mayor es",digitoMayor(digitos))
+    
 
 if (__name__ == "__main__"):
     main()

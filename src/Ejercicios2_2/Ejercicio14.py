@@ -18,11 +18,12 @@ def sumarNumeros():
         if n!=0:
             suma+=n
         else:
-            print("La suma de los números es:", suma)
             break
+    return suma
 
 def main():
-    sumarNumeros()
+    print("La suma de los números es:", sumarNumeros())
+    
 
 if (__name__ == "__main__"):
     main()

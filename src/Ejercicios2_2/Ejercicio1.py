@@ -11,16 +11,18 @@ def pedirPalabra():
     return palabra
 
 def imprimirPalabra(palabra):
-    cont=0
+    resultado=""
 
-    for i in range(cont,10):
-        print(palabra)
-        cont+=1
+    for i in range(10):
+        resultado+=palabra+" "
+
+    return resultado
 
 def main():
     palabra=pedirPalabra()
 
-    imprimirPalabra(palabra)
+    resultado=imprimirPalabra(palabra)
+    print(resultado)
 
 if (__name__ == "__main__"):
     main()

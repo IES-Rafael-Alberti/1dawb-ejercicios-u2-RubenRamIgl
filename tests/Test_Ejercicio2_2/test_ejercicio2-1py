@@ -1,0 +1,12 @@
+import pytest
+from src.Ejercicios2_2.Ejercicio1 import pedirPalabra, imprimirPalabra
+
+@pytest.mark.parametrize(
+    "input_palabra, expected",
+    [
+        ("hola", "hola hola hola hola hola hola hola hola hola hola "),
+        ("adios", "adios adios adios adios adios adios adios adios adios adios "),
+    ]
+)
+def test_imprimirPalabra_params(input_palabra, expected):
+    assert imprimirPalabra(input_palabra) == expected

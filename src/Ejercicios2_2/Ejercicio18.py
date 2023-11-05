@@ -13,19 +13,21 @@ def pedirNumeros():
         
 def sumarNumeros(numeros):
     suma=sum(numeros)
-    print("La suma de los números positivos es:",suma)
+    return suma
+    
 
 def contarPares(numeros):
     cont=0
     for i in numeros:
         if(i%2==0):
             cont+=1
-    print("Se introdujeron",cont,"números pares")
+    return cont
 
 def main():
     numeros=pedirNumeros()
-    sumarNumeros(numeros)
-    contarPares(numeros)
+    print("La suma de los números positivos es:",sumarNumeros(numeros))
+    print("Se introdujeron",contarPares(numeros),"números pares")
+    
 
 if (__name__ == "__main__"):
     main()

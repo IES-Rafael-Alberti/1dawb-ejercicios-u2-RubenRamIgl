@@ -17,10 +17,12 @@ def pedirNumeros():
 
 def numeroMayor(numeros):
     mayor=max(numeros)
-    print("El número mayor es",mayor)
+    return mayor
+
 def main():
     n=pedirNumeros()
-    numeroMayor(n)
+    print("El número mayor es",numeroMayor(n))
+    
 
 if (__name__ == "__main__"):
     main()

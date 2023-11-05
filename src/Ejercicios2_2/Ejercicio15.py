@@ -5,7 +5,7 @@ def pedirNumeros():
         if (n.isnumeric()):
             if(int(n)==0):
                 salir=True
-            return n
+            return int(n)
         else:
             if(int(n)<0):
                 n=0
@@ -24,11 +24,12 @@ def sumarNumeros():
         if n!=0:
             suma+=n
         else:
-            print("La suma de los números positivoses:", suma)
             break
+    return int(suma)
 
 def main():
-    sumarNumeros()
+    print("La suma de los números positivoses:", sumarNumeros())
+    
 
 if (__name__ == "__main__"):
     main()
